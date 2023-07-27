@@ -85,6 +85,7 @@
         "newlinesBetween": "always",
         "groups": [
           "/^react/",
+          "/^styled-components/",
           "/^@/pages/",
           "/^@/components/",
           "/^@/enums/",
