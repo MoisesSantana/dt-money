@@ -92,7 +92,7 @@
           "/^@/hooks/",
           "/^@/interfaces/",
           "/^@/schemas/",
-          "/^@/styles/",
+          "/^(?:@\\/styles|\\.\\/styles)/",
           "/^@/utils/",
           [
             "module"
