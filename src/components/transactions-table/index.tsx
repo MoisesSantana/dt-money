@@ -3,7 +3,7 @@ import { useContext } from 'react';
 
 import { PriceHighlight, Table } from './styles';
 
-import { TransactionsContext } from 'src/contexts/TransactionsContext';
+import { TransactionsContext } from '../../contexts/TransactionsContext';
 
 export function TransactionsTable() {
   const { transactions } = useContext(TransactionsContext);
