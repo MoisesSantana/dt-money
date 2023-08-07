@@ -1,3 +1,4 @@
+
 import { Header } from '@/components/header';
 import { SearchForm } from '@/components/search-form';
 import { Summary } from '@/components/summary';
