@@ -6,3 +6,11 @@ export interface Transaction {
   price: number;
   createdAt: string;
 }
+
+export interface TransactionContextType {
+  transactions: Transaction[];
+}
+
+export interface TransactionProviderProps {
+  children: React.ReactNode;
+}
