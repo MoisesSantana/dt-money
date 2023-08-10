@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from 'react';
 
 import {
+  CreateTransactionInput,
   Transaction,
   TransactionContextType,
   TransactionProviderProps
@@ -16,11 +17,21 @@ export function TransactionsProvider({ children }: TransactionProviderProps) {
   async function fetchTransactions(query?: string) {
     const response = await api.get('/transactions', {
       params: {
+        _sort: 'createdAt',
+        _order: 'desc',
         q: query,
       }
     });
 
     setTransactions(response.data);
+  }
+
+  async function createTransaction(transaction: CreateTransactionInput) {
+    const response = await api.post('/transactions', {
+      ...transaction, createdAt: new Date()
+    });
+
+    setTransactions(state => [response.data, ...state]);
   }
 
   useEffect(() => {
@@ -31,6 +42,7 @@ export function TransactionsProvider({ children }: TransactionProviderProps) {
     <TransactionsContext.Provider value={{
       transactions,
       fetchTransactions,
+      createTransaction,
     }}>
       {children}
     </TransactionsContext.Provider>
