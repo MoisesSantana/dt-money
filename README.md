@@ -1,6 +1,6 @@
 # Boas-vindas ao repositório!
 
-Esta aplicação é um controlador de transações, utilizando React com TS e Context API para gerenciamento do estado global.
+Esta aplicação é um controlador de transações, utilizando React com TS e Context API para gerenciamento do estado global. Já para a fake API você pode acessar <a href="https://github.com/MoisesSantana/dt-money-fake-api" target="_blank">esse repositório</a>.
 
 # Técnologias Utilizadas
 
@@ -121,6 +121,7 @@ Esta aplicação é um controlador de transações, utilizando React com TS e Co
 ## Acesso ao deploy
 
 <a href="dt-money.surge.sh" target="_blank">Aqui</a> você consegue acessar a aplicação sem a necessidade da instalação.
+Caso queira ver a fake API construída com JSON Server, pode abrir <a href="https://dt-money-fake-api.vercel.app" target="_blank">aqui</a>.
 
 ## Guia de instalação
 
@@ -131,9 +132,6 @@ Caso queira baixar essa aplicação e rodar em sua maquina você pode seguir est
 ```bash
 # Instalação de pacotes
 $ npm install
-
-# Execução do JSON Server
-$ npm run dev:server
 
 # Execução local
 $ npm run dev
